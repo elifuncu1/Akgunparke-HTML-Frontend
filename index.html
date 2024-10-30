@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="tr">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap');
+#sliderim{
+   background-color: white;
+}
+#maintext{
+   
+    font-family: 'Merriweather', serif;
+    color: #00C5EF;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    font-size: 45px;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@-webkit-keyframes come-in {
+  0% {
+    -webkit-transform: translatey(100px);
+            transform: translatey(100px);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+            transform: translateX(-50px) scale(0.4);
+  }
+  70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+            transform: translateX(0px) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translatey(0px) scale(1);
+            transform: translatey(0px) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes come-in {
+  0% {
+    -webkit-transform: translatey(100px);
+            transform: translatey(100px);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+            transform: translateX(-50px) scale(0.4);
+  }
+  70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+            transform: translateX(0px) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translatey(0px) scale(1);
+            transform: translatey(0px) scale(1);
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.floating-container {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  margin: 35px 25px;
+}
+.floating-container:hover {
+  height: 300px;
+}
+.floating-container:hover .floating-button {
+  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  -webkit-transform: translatey(5px);
+          transform: translatey(5px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container:hover .element-container .float-element:nth-child(1) {
+  -webkit-animation: come-in 0.4s forwards 0.2s;
+          animation: come-in 0.4s forwards 0.2s;
+}
+.floating-container:hover .element-container .float-element:nth-child(2) {
+  -webkit-animation: come-in 0.4s forwards 0.4s;
+          animation: come-in 0.4s forwards 0.4s;
+}
+.floating-container:hover .element-container .float-element:nth-child(3) {
+  -webkit-animation: come-in 0.4s forwards 0.6s;
+          animation: come-in 0.4s forwards 0.6s;
+}
+.floating-container .floating-button {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #2cb3f0;
+  bottom: 0;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  line-height: 65px;
+  text-align: center;
+  font-size: 23px;
+  z-index: 100;
+  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container .float-element {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+.floating-container .float-element .material-icons {
+  vertical-align: middle;
+  font-size: 16px;
+}
+.floating-container .float-element:nth-child(1) {
+  background: #42A5F5;
+  box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+}
+.floating-container .float-element:nth-child(2) {
+  background: #4CAF50;
+  box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
+}
+.floating-container .float-element:nth-child(3) {
+  background: #FF9800;
+  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+}
+</style>
+<head>
+
+   <!-- Meta Tags For Seo + Page Optimization -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Bilecik Parke, en kaliteli parke modelleri ve uygun fiyatlarıyla müşterilerine hizmet vermektedir. İhtiyacınız olan Bilecik parke fiyatları, ustaları ve modelleri için tıklayın.">
+	<meta name="keywords" content="Bilecik parke, parke modelleri, parke fiyatları, parke ustaları,bilecik laminant parke,Akgün Parke">
+   <meta name="author" content="">
+
+   <!-- Insert Favicon Here -->
+   <link href="images/favicon.png" rel="icon">
+
+   <!-- Page Title(Name)-->
+   <title>Akgün Parke | Anasayfa</title>
+
+   
+   <!-- Bootstrap CSS Files -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+   
+   <!-- Animate CSS File -->
+   <link rel="stylesheet" href="css/animate.css">
+   
+   <!-- Font-Awesome CSS File -->
+   <link rel="stylesheet" href="css/fontawesome-all.min.css">
+   
+   <!-- Themify CSS File -->
+   <link rel="stylesheet" href="css/themify-icons.css">
+
+   <!-- Cube Portfolio CSS File -->
+   <link rel="stylesheet" href="css/cubeportfolio.min.css">
+
+   <!-- Fancybox CSS File -->
+   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+   <!-- Revolution CSS File -->
+   <link rel="stylesheet" href="css/settings.css">
+   <link rel="stylesheet" href="css/layer.css">
+   <link rel="stylesheet" href="css/navigation.css">
+
+   <!-- Rev Slider Addons File -->
+   <link rel="stylesheet" href="css/revolution-addons/particles-effect/revolution.addon.particles.css">
+
+   <!-- Swiper CSS File -->
+   <link rel="stylesheet" href="css/swiper.min.css">
+
+   <!-- Custom Style CSS File -->
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+   <!-- Page Loader -->
+   <div class="preloader">
+      <div class="loader-dot-outer">
+         <div class="loader-dot-center"></div>
+         <div class="loader-dot"></div>
+         <div class="loader-dot"></div>
+         <div class="loader-dot"></div>
+         <div class="loader-dot"></div>
+         <div class="loader-dot"></div>
+         <div class="loader-dot"></div>
+      </div>
+   </div>
+   <!-- Page Loader -->
+
+   <!-- Page Wrapper -->
+   <section class="page-wrapper">
+
+      <!-- Header Section Starts -->
+      <header class="site-header">
+         <nav class="navbar navbar-expand-lg navbar-full-white-bg">
+            <div class="container nav-logo-detail-outer">
+                  <a class="navbar-brand" href="index.html">
+                     <img src="images/logo.jpg" alt="Akgün Parke" class="logo-default">
+                     <img src="images/logo.jpg" alt="Akgün Parke" class="logo-after-scroll">
+                  </a>
+                  <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                     <i class="fa fa-bars"></i>
+                  </button>
+                  <div class="collapse navbar-collapse d-sm-0 d-md-0">
+                        <ul class="navbar-nav ml-auto">
+                           <li class="nav-item">
+                              <a class="nav-link active scroll" href="#main-slider-section">Anasayfa</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link scroll" href="#about-company-section">Biz Kimiz</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link scroll" href="#company-portfolio-section">Ürünlerimiz</a>
+                           </li>
+                        </ul>
+                     </div>
+               </div>
+               <!--side menu open button-->
+            <div id="menu_bars" class="full"> <span></span> <span></span> <span></span> </div>
+
+            <div class="sidebar_menu">
+               <nav class="side-nav side-nav-right full-nav">
+                  <ul class="side-nav-list">
+                     <li>
+                        <a class="active scroll" href="#main-slider-section">Anasayfa</a>
+                     </li>
+                     <li>
+                        <a class="scroll" href="#about-company-section">Biz Kimiz</a>
+                     </li>
+                     <li>
+                        <a class="scroll" href="#company-portfolio-section">Ürünlerimiz</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </nav>
+         </div>    
+         </nav>
+      </header>
+      <!-- Header Section End -->
+
+     
+      <!-- Main Slider Section -->
+      <section class="main-slider-section" id="main-slider-section">
+
+         <!-- Swiper Slider Parallax Background -->
+         <div class="main-slider-section-inner-three swiper-container index-four height-100" data-parallax="scroll" data-image-src="images/dukkanon.jpg">
+
+            <!-- Swiper Wrapper -->
+            <div class="swiper-wrapper">
+
+               <!-- Swiper Slide -->
+               <div class="swiper-slide">
+
+                  <!-- Carousel Text -->
+                  <div class="carousel-text-rotate position-absolute slider-caption-outer width-100 text-center">
+                     <h2 id="maintext" class="font-weight-100 fontface-one text-color-white">İç Yapıya Dair <br> <span class="font-weight-700">Herşey Bizde Var</span></h2>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination"></div>
+         </div>
+      </section>
+      <!-- /Main Slider Section End -->
+
+     
+      <!-- About Company Section -->
+      <section class="about-company-section background-grey padding-top-bottom" id="about-company-section">
+         <div class="container">
+            <!-- About Company Services -->
+            <div class="about-company-services about-company-services-two padding-bottom">
+               <div class="section-heading text-center">
+                  <div class="row">
+                     <div class="col-lg-6 offset-lg-3 col-md-2 offset-md-2">
+                        <h2 class="fontface-one text-color-dark padding-bottom-35 wow fadeInUp" data-wow-delay="300ms">Size <span class="text-color-secondary font-weight-700">Ne Sunuyoruz?</span></h2>
+                        <p class="paragraph-15 fontface-two text-color-darkgrey wow fadeInUp" data-wow-delay="350ms">
+                           Bilecik'te her model ve renk laminant parke seçeneği ile deneyimli ve tecrübeli personelimizle montaj dahil hizmet veriyoruz. Yine PVC doğrama çelik kapı Amerikan kapı variodor membran kapı ve diğer iç kapı çeşitleri duş kabini seçenekleri sineklik katlanır cam balkon sistemleri ahşap merdiven ve diğer ahşap işleri taleplerinize göre satıyor ve montajını yapıyoruz. Profesyonel deneyimli  ekiplerimizle hem üretiyor hem sahada montajını kendimiz yapıyoruz.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- About Company Slider -->
+         </div>
+      </section>
+      <!-- /About Company Section End -->
+      <div id="sliderim">
+         <div class="about-company-slider-section">
+            <div class="about-company-slider swiper-container">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="about-company-slide">
+                        <div class="row">
+                           <div class="col-lg-6 offset-lg-0 col-md-8 offset-md-2">
+                              <div class="about-slider-image-section clearfix position-relative">
+                                 <div class="about-slider-images-section-inner">
+                                    <img src="images/dukkanon.jpg" alt="Akgün Parke Dükkan Önü" data-slide="animated" data-animate="zoomIn">
+                                 </div>
+                                 <div class="about-img-gradient-box gradient-bg-green-blue" data-slide="animated" data-animate="zoomIn"></div>
+                              </div>
+                           </div>
+
+                           <div class="col-lg-6 vertical-align-about-caption">
+                              <div class="about-slider-img-detail" data-slide="animated" data-animate="fadeInRight">
+                                 <p class="text-color-secondary paragraph-14 fontface-two padding-bottom-25">Bilecikte Parkede 1 Numara</p>
+                                 <h2 class="fontface-one text-color-dark padding-bottom-35">Neden <span class="font-weight-700">Biz?</span></h2>
+                                 <p class="text-color-dark paragraph-15 padding-bottom-35 text-color-darkgrey">
+                                    2012 yılından bu yana sahada işçilik ve uygulama yaparak, en alttan öğrenerek tecrübe kazandık. İşimizi profesyonel yapıyor, ticareti de ürünün eder hakkı üzerinden yapıyoruz. İç yapıya dair tüm ürünleri hizmetinize sunuyoruz ve en önemlisi, satın aldığınız ürünü zamanında beklentilerinizi karşılayan en kaliteli hizmetle teslim ediyoruz. Parkede tek ürün ve tek renk değil, tüm renk ve modelleri 25 yıl garantili ürünler olarak satıyor ve aynı kalitede montaj yapıyoruz. En iyi ürünü en iyi makul fiyatlarla size sunuyoruz. Gelin, hayal ettiğiniz şekilde evinizin ve iş yerinizin tüm iç yapıya dair hizmetlerini size sunalım.</p>                      
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                     <div class="about-company-slide">
+                        <div class="row">
+                           <div class="col-lg-6 offset-lg-0 col-md-8 offset-md-2">
+                              <div class="about-slider-image-section clearfix position-relative">
+                                 <div class="about-slider-images-section-inner">
+                                    <img src="images/ic1.jpg" alt="Akgün Parke İç Kapılar" data-slide="animated" data-animate="zoomIn">
+                                 </div>
+                                 <div class="about-img-gradient-box gradient-bg-pink-purple" data-slide="animated" data-animate="zoomIn"></div>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 vertical-align-about-caption">
+                              <div class="about-slider-img-detail" data-slide="animated" data-animate="fadeInRight">
+                                 <p class="text-color-secondary paragraph-14 fontface-two padding-bottom-25">Memnuniyet</p>
+                                 <h2 class="fontface-one text-color-dark padding-bottom-35">Müşteri <span class="font-weight-700">Memnuniyeri</span></h2>
+                                 <p class="text-color-dark paragraph-15 padding-bottom-35 text-color-darkgrey">
+                                    2012 yılından bu yana yaklaşık 3500 müşteriye hizmet verdik. Genelde müşterilerimiz, hep birbirine referans olan önerilerle gelen müşterilerimizden oluşmaktadır. Güven ve düzgün, dürüst ticaret en öncü ilkemizdir. </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  
+               </div>
+               <div class="swiper-pagination d-none d-sm-none d-md-none d-lg-block"></div>
+            </div>
+         </div>
+      </div>
+
+     
+      <!-- Company Stats Information Start -->
+      <section class="company-stats-section background-grey padding-top-bottom" id="stats-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-7 order-md-12 order-sm-12 order-12 order-lg-1">
+                  <div class="row">
+                     <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="stats-block-inner text-center wow fadeInUp" data-wow-delay="300ms">
+                           <i class="ti-hand-point-right text-color-dark "></i>
+                           <div class="stats-number-inner text-color-dark fontface-one font-weight-700 padding-top-20">
+                              <span>3500</span>+
+                           </div>
+                           <p class="paragraph-16 font-weight-400 fontface-two text-color-dark padding-top-5">Memnun Müşteri</p>
+                        </div>
+                     </div>
+
+                     <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="stats-block-inner text-center wow fadeInUp" data-wow-delay="350ms">
+                           <i class="ti-bar-chart text-color-dark "></i>
+                           <div class="stats-number-inner text-color-dark fontface-one font-weight-700 padding-top-20">
+                              <span>11</span>+
+                           </div>
+                           <p class="paragraph-16 font-weight-400 fontface-two text-color-dark padding-top-5">Yıllık Tecrübe</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-lg-5 order-md-1 order-sm-1 order-1 order-lg-12">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="stats-heading text-right padding-bottom-30 wow fadeInUp" data-wow-delay="300ms">
+                           <h2 class="text-color-dark fontface-one">Müşteri Memnuniyeti</h2>
+                           <h2 class="text-color-dark fontface-one">Bizim için <span class="text-color-secondary ">Önemli</span></h2>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Company Stats Information End -->
+
+     
+      <!-- Company Portfolio Start -->
+      <section class="company-portfolio-section padding-top-bottom" id="company-portfolio-section">
+         <div class="container">
+            <div class="section-heading">
+               <div class="row">
+                  <div class="col-lg-6 wow fadeInUp" data-wow-delay="300ms">
+                     <p class="fontface-two text-color-secondary paragraph-14 padding-bottom-25">Ürünlerimiz</p>
+                     <h2 class="fontface-one text-color-dark padding-bottom-35"> <span class="text-color-dark font-weight-700 ">Ürünler</span></h2>
+                  </div>
+                  <div class="col-md-12">
+
+                     <div id="js-grid-mosaic" class="cbp cbp-l-grid-mosaic">
+                        <div class="cbp-item graphic wow fadeInUp" data-wow-delay="300ms">
+                           <a href="laminantparke.html">
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/laminant.jpg" href="laminantparke.html"  style="width: 400px;height: 400px;">
+                              </div>
+                           </a>
+                           <a href="laminantparke.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Laminant Parkeler</h3></a>
+                        </div>
+
+                        <div class="cbp-item motion wow fadeInUp" data-wow-delay="350ms">
+                           <a href="ickapilar.html" >
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/ickapilar.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i></div>
+                           </a>
+                           <a href="ickapilar.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">İç Kapılar</h3></a>
+                        </div>
+
+                        <div class="cbp-item print web-design wow fadeInUp" data-wow-delay="400ms">
+                           <a href="celikkapilar.html" >
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/celikkapilar.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i></div>
+                           </a>
+                           <a href="celikkapilar.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Çelik Kapılar</h3></a>
+                        </div>
+
+                        <div class="cbp-item web-design wow fadeInUp" data-wow-delay="450ms">
+                           <a href="mutfakdolaplari.html" >
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/mutfakdolabi.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i></div>
+                           </a>
+                           <a href="mutfakdolaplari.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Mutfak Dolapları</h3></a>
+                        </div>
+
+                        <div class="cbp-item print wow fadeInUp" data-wow-delay="500ms">
+                           <a href="banyodolaplari.html" >
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/banyodolabi.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i></div>
+                           </a>
+                           <a href="banyodolaplari.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Banyo Dolapları</h3></a>
+                           
+                        </div>
+
+                        <div class="cbp-item graphic wow fadeInUp" data-wow-delay="550ms">
+                           <a href="dusakabin.html" >
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/dusakabin.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i> </div>
+                           </a>
+                           <a href="dusakabin.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Duşakabin Çeşitleri</h3></a>
+                        </div>
+                        
+                        <div class="cbp-item motion wow fadeInUp" data-wow-delay="600ms">
+                           <a href="ahsapmerdiven.html" >
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/ahsapmerdiven.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i></div>
+                           </a>
+                           <a href="ahsapmerdiven.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Ahşap Merdiven ve Tüm Ahşap İşleri</h3></a>
+                        </div>
+
+                        <div class="cbp-item graphic wow fadeInUp" data-wow-delay="650ms">
+                           <a href="pvcdograma.html">
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/pvc.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i> </div>
+                           </a>
+                           <a href="pvcdograma.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">PVC Doğrama</h3></a>
+                        </div>
+
+                        <div class="cbp-item motion wow fadeInUp" data-wow-delay="700ms">
+                           <a href="mutfaktezgahi.html">
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/mutfaktezgahi.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i></div>
+                           </a>
+                           <a href="mutfaktezgahi.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Mutfak Tezgahı</h3></a>
+                        </div>
+
+                        <div class="cbp-item graphic wow fadeInUp" data-wow-delay="750ms">
+                           <a href="evtadilatisleri.html">
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/tadilat.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i> </div>
+                           </a>
+                           <a href="evtadilatisleri.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Tüm Ev İçi Tadilat İşleri</h3></a>
+                        </div>
+
+                        <div class="cbp-item motion wow fadeInUp" data-wow-delay="800ms">
+                           <a href="armaturler.html">
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/armaturler.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i></div>
+                           </a>
+                           <a href="armaturler.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Mutfak ve Banyo Armatürleri</h3></a>
+                        </div>
+
+                        <div class="cbp-item graphic wow fadeInUp" data-wow-delay="850ms">
+                           <a href="parkeisciligi.html">
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/iscilik.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i> </div>
+                           </a>
+                           <a href="parkeisciligi.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Laminant Parke İşçiliği ve Ahşap Lamine İşçiliği</h3></a>
+                        </div>
+
+                        <div class="cbp-item motion wow fadeInUp" data-wow-delay="900ms">
+                           <a href="pvckaplama.html">
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/cambalkon.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i></div>
+                           </a>
+                           <a href="pvckaplama.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Cam Balkon Sistemleri</h3></a>    
+                        </div>
+
+                        <div class="cbp-item graphic wow fadeInUp" data-wow-delay="850ms">
+                           <a href="mdfsupurgelik.html">
+                              <div class="cbp-caption-defaultWrap">
+                                 <img src="images/supurgelik.jpg"  style="width: 400px;height: 400px;">
+                              </div>
+                              <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="ti-zoom-in"></i> </div>
+                           </a>
+                           <a href="mdfsupurgelik.html"><h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">MDF Süpürgelik</h3>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Company Portfolio End -->
+      <a href="iletisim.html">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <div class="floating-container">
+        <div class="floating-button">📞</div>
+      </div>
+      </a>
+      <!-- Contact Form Section Start -->
+      <!-- Contact Form Section End -->
+
+     
+      <!-- Google Map Section -->
+      <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=gazipa%C5%9Fa%20mahallesi%20mazharbey%20sokak%20no%2022/A+(My%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe></div>
+      <!-- /Google Map Section End -->
+
+      <!-- Page Footer -->
+      <footer class="footer-section padding-bottom-70 padding-top-70 padding-top-1">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 order-lg-1 order-md-3 order-sm-3 order-3 wow fadeIn" data-wow-delay="300ms">
+                  <p class="paragraph-13 footer-copyright-text font-weight-500 fontface-two text-color-dark padding-top-10">&copy; 2023 | Tüm Hakları Akgün Parke'ye aittir.
+                  </p>
+               </div>
+
+               <div class="col-lg-6 order-lg-1 order-md-2 order-sm-2 order-2 wow fadeIn" data-wow-delay="350ms">
+                  <div class="footer-links padding-top-5">
+                     <ul class="footer-links-outer text-center">
+                        <li class="footer-links-inner">
+                           <a class="scroll" href="#main-slider-section">Anasayfa</a>
+                        </li>
+                        <li class="footer-divider">|</li>
+                        <li class="footer-links-inner">
+                           <a class="scroll" href="#about-company-section">Biz Kimiz</a>
+                        </li>
+                        <li class="footer-divider">|</li>
+                        <li class="footer-links-inner">
+                           <a class="scroll" href="#company-portfolio-section">Ürünlerimiz</a>
+                        </li>             
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="col-lg-2 order-lg-1 clearfix order-md-1 order-sm-1 order-1 wow fadeIn" data-wow-delay="400ms">
+                  <a href="#." class="footer-logo"><img src="images/logo.jpg" alt="Akgün Parke Logo"></a>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- /Page Footer End -->
+
+   </section>
+
+   <!-- /Page Wrapper End -->
+
+   <!-- jQuery v3.1.1 -->
+   <script src="js/jquery.js"></script>
+
+   <!-- Popper Core Javascript -->
+   <script src="js/popper.min.js"></script>
+
+   <!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+
+   <!-- Goggle Map Api -->
+   <script src="http://maps.google.com/maps/api/js?key=AIzaSyDxXxrAn9jGmqcQoFalpXBsQ-qkIgkaaJs"></script>
+   <script src="js/maps.min.js"></script>
+
+   <!-- Cube Portfolio Core JavaScript -->
+   <script src="js/jquery.cubeportfolio.min.js"></script>
+
+   <!-- Parallax Core Javascript -->
+   <script src="js/parallax.min.js"></script>
+
+   <!-- Appear Core Javascript -->
+   <script src="js/jquery.appear.min.js"></script>
+
+   <!-- REVOLUTION JS FILES -->
+   <script src="js/jquery.themepunch.tools.min.js"></script>
+   <script src="js/jquery.themepunch.revolution.min.js"></script>
+
+   <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+   <script src="js/extensions/revolution.extension.actions.min.js"></script>
+   <script src="js/extensions/revolution.extension.carousel.min.js"></script>
+   <script src="js/extensions/revolution.extension.kenburn.min.js"></script>
+   <script src="js/extensions/revolution.extension.layeranimation.min.js"></script>
+   <script src="js/extensions/revolution.extension.migration.min.js"></script>
+   <script src="js/extensions/revolution.extension.navigation.min.js"></script>
+   <script src="js/extensions/revolution.extension.parallax.min.js"></script>
+   <script src="js/extensions/revolution.extension.slideanims.min.js"></script>
+   <script src="js/extensions/revolution.extension.video.min.js"></script>
+
+   <!-- Before After Effect Slider Revolution -->
+   <link href="css/revolution-addons/before-after-affect/revolution.addon.beforeafter.css" rel="stylesheet">
+   <script src="js/revolution-addons/before-after-affect/revolution.addon.beforeafter.min.js"></script>
+
+   <!--  Fancybox Core Javascript -->
+   <script src="js/jquery.fancybox.min.js"></script>
+
+   <!-- Swiper Core Javascript -->
+   <script src="js/swiper.min.js"></script>
+   
+   <!--wow Transitions-->
+   <script src="js/wow.min.js"></script>
+
+   <!-- Custom JavaScript -->
+   <script src="js/script.js"></script>
+
+</body>
+</html> 
